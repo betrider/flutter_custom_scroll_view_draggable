@@ -10,6 +10,7 @@ class DraggableHome extends StatefulWidget {
 
   /// Title: A Widget to display title in AppBar
   final Widget title;
+
   /// Center Title: Allows toggling of title from the center. By default title is in the center.
   final bool centerTitle;
 
@@ -44,6 +45,7 @@ class DraggableHome extends StatefulWidget {
   /// curvedBodyRadius: Creates a border top left and top right radius of body, Default radius of the body is 20.0. For no radius simply set value to 0.
   final double curvedBodyRadius;
 
+  // curvedBodyRadius: Height of the curved widget height.
   final double curvedBodyHeight;
 
   /// body: A widget to Body
@@ -82,35 +84,35 @@ class DraggableHome extends StatefulWidget {
   final ScrollPhysics? physics;
 
   /// This will create DraggableHome.
-  const DraggableHome(
-      {Key? key,
-      this.leading,
-      required this.title,
-      this.centerTitle = true,
-      this.actions,
-      this.alwaysShowLeadingAndAction = false,
-      this.alwaysShowTitle = false,
-      this.headerExpandedHeight = 0.35,
-      required this.headerWidget,
-      this.headerBottomBar,
-      this.backgroundColor,
-      this.appBarColor,
-      this.curvedBodyRadius = 20,
-      this.curvedBodyHeight = 10,
-      required this.body,
-      this.drawer,
-      this.fullyStretchable = false,
-      this.stretchTriggerOffset = 200,
-      this.expandedBody,
-      this.stretchMaxHeight = 0.9,
-      this.bottomSheet,
-      this.bottomNavigationBarHeight = kBottomNavigationBarHeight,
-      this.bottomNavigationBar,
-      this.floatingActionButton,
-      this.floatingActionButtonLocation,
-      this.floatingActionButtonAnimator,
-      this.physics})
-      : assert(headerExpandedHeight > 0.0 && headerExpandedHeight < stretchMaxHeight),
+  const DraggableHome({
+    Key? key,
+    this.leading,
+    required this.title,
+    this.centerTitle = true,
+    this.actions,
+    this.alwaysShowLeadingAndAction = false,
+    this.alwaysShowTitle = false,
+    this.headerExpandedHeight = 0.35,
+    required this.headerWidget,
+    this.headerBottomBar,
+    this.backgroundColor,
+    this.appBarColor,
+    this.curvedBodyRadius = 20,
+    this.curvedBodyHeight = 10,
+    required this.body,
+    this.drawer,
+    this.fullyStretchable = false,
+    this.stretchTriggerOffset = 200,
+    this.expandedBody,
+    this.stretchMaxHeight = 0.9,
+    this.bottomSheet,
+    this.bottomNavigationBarHeight = kBottomNavigationBarHeight,
+    this.bottomNavigationBar,
+    this.floatingActionButton,
+    this.floatingActionButtonLocation,
+    this.floatingActionButtonAnimator,
+    this.physics,
+  })  : assert(headerExpandedHeight > 0.0 && headerExpandedHeight < stretchMaxHeight),
         assert(
           (stretchMaxHeight > headerExpandedHeight) && (stretchMaxHeight < .95),
         ),
